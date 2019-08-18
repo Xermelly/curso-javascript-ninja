@@ -5,7 +5,7 @@ Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
 var championship = 'Paulista';
-
+console.log(championship);
 /*
 Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
 Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
@@ -32,21 +32,20 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 function showTeamPosition(num){
-    var posicao = num - 1;
-    if (posicao >= 5) {
+    if (num < 1 || num > 5) {
     return 'Não temos a informação do time que está nessa posição';
     }; 
-    return 'O time que está em '+ num +'º lugar é o '+ teams[posicao] +'.';
+    return 'O time que está em '+ num +'º lugar é o '+ teams[num - 1] +'.';
 }
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-showTeamPosition(1) // 'O time que está em 1º lugar é o São Paulo.'
-showTeamPosition(3) // 'O time que está em 3º lugar é o Santos.'
-showTeamPosition(5) // 'O time que está em 5º lugar é o Mogi Mirim.'
-showTeamPosition(6) // 'Não temos a informação do time que está nessa posição'
+console.log(showTeamPosition(1)); // 'O time que está em 1º lugar é o São Paulo.'
+console.log(showTeamPosition(3)); // 'O time que está em 3º lugar é o Santos.'
+console.log(showTeamPosition(5)); // 'O time que está em 5º lugar é o Mogi Mirim.'
+console.log(showTeamPosition(6)); // 'Não temos a informação do time que está nessa posição'
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
@@ -55,8 +54,7 @@ repetição "while".
 var counter = 20;
 
 while(counter <= 30) {
-    console.log(counter);
-    counter++;
+    console.log(counter++);
 }
 
 /*
